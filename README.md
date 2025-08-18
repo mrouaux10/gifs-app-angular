@@ -1,104 +1,104 @@
-# GifsApp - Aplicación de GIFs con Angular
+# GifsApp - GIFs Application with Angular
 
-Una aplicación web moderna desarrollada en Angular que permite buscar, explorar y gestionar GIFs utilizando la API de Giphy.
+A modern web application developed in Angular that allows you to search, explore and manage GIFs using the Giphy API.
 
-## Características
+## Features
 
-- Búsqueda de GIFs en tiempo real
-- Página de tendencias
-- Historial de búsquedas
-- Interfaz moderna y responsive con Tailwind CSS
-- Desarrollada con Angular 20
+- Real-time GIF search
+- Trending page
+- Search history
+- Modern and responsive interface with Tailwind CSS
+- Developed with Angular 20
 
-## Tecnologías utilizadas
+## Technologies used
 
 - **Frontend:** Angular 20
 - **Styling:** Tailwind CSS
 - **API:** Giphy API
 - **Testing:** Jasmine & Karma
 
-## Requisitos previos
+## Prerequisites
 
-- Node.js (versión 18 o superior)
-- npm o yarn
-- Cuenta en Giphy para obtener API key
+- Node.js (version 18 or higher)
+- npm or yarn
+- Giphy account to get API key
 
-## Instalación rápida
+## Quick installation
 
-1. **Clonar el repositorio:**
+1. **Clone the repository:**
 ```bash
 git clone https://github.com/TU_USUARIO/gifs-app.git
 cd gifs-app
 ```
 
-2. **Instalar dependencias:**
+2. **Install dependencies:**
 ```bash
 npm install
 ```
 
-3. **Configurar API Key:**
-   - Ve a [SETUP.md](./SETUP.md) para instrucciones detalladas
-   - Obtén tu API key de Giphy
-   - Configura la variable de entorno o archivos de environment
+3. **Configure API Key:**
+   - Go to [SETUP.md](./SETUP.md) for detailed instructions
+   - Get your Giphy API key
+   - Configure the environment variable or environment files
 
-4. **Ejecutar en modo desarrollo:**
+4. **Run in development mode:**
 ```bash
 npm start
 ```
 
-5. **Abrir en el navegador:**
+5. **Open in browser:**
 ```
 http://localhost:4200
 ```
 
-## Scripts disponibles
+## Available scripts
 
-- `npm start` - Inicia el servidor de desarrollo
-- `npm run build` - Construye la aplicación para producción
-- `npm test` - Ejecuta las pruebas unitarias
-- `npm run watch` - Construye en modo watch
+- `npm start` - Starts the development server
+- `npm run build` - Builds the application for production
+- `npm test` - Runs unit tests
+- `npm run watch` - Builds in watch mode
 
-## Estructura del proyecto
+## Project structure
 
 ```
 src/app/gifs/
-├── components/          # Componentes reutilizables
-│   ├── gif-list/       # Lista de GIFs
-│   ├── gif-list-item/  # Item individual de GIF
-│   ├── side-menu/      # Menú lateral
-│   └── side-menu-options/ # Opciones del menú
-├── interfaces/          # Interfaces TypeScript
-├── mappers/            # Mappers de datos
-├── pages/              # Páginas principales
-│   ├── dashboard/      # Dashboard principal
-│   ├── search/         # Página de búsqueda
-│   ├── trending/       # Página de tendencias
-│   └── history/        # Historial de búsquedas
-└── services/           # Servicios de la aplicación
+├── components/          # Reusable components
+│   ├── gif-list/       # GIF list
+│   ├── gif-list-item/  # Individual GIF item
+│   ├── side-menu/      # Side menu
+│   └── side-menu-options/ # Menu options
+├── interfaces/          # TypeScript interfaces
+├── mappers/            # Data mappers
+├── pages/              # Main pages
+│   ├── dashboard/      # Main dashboard
+│   ├── search/         # Search page
+│   ├── trending/       # Trending page
+│   └── history/        # Search history
+└── services/           # Application services
 ```
 
-## Configuración de API
+## API Configuration
 
-**IMPORTANTE:** Este proyecto requiere una API key de Giphy para funcionar. 
+**IMPORTANT:** This project requires a Giphy API key to work.
 
-**Ver [SETUP.md](./SETUP.md) para instrucciones completas de configuración.**
+**See [SETUP.md](./SETUP.md) for complete configuration instructions.**
 
 ## Testing
 
 ```bash
-# Ejecutar pruebas unitarias
+# Run unit tests
 npm test
 
-# Ejecutar pruebas con coverage
+# Run tests with coverage
 npm run test:coverage
 ```
 
 ## Building
 
 ```bash
-# Build para desarrollo
+# Build for development
 npm run build
 
-# Build para producción
+# Build for production
 npm run build --prod
 ```
