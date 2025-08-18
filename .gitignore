@@ -40,3 +40,17 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Environment files - IMPORTANTE: No subir archivos con API keys reales
+.env
+.env.local
+.env.test.local
+.env.production.local
+
+# Archivos de environment con API keys reales - NO SUBIR
+# Si quieres usar tu API key real, renombra estos archivos a .local
+src/environments/environment.ts
+src/environments/environment.development.ts
+
+# Solo subir los archivos de ejemplo
+!src/environments/environment.example.ts

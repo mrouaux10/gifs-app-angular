@@ -1,59 +1,104 @@
-# GifsApp
+# GifsApp - Aplicación de GIFs con Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.2.
+Una aplicación web moderna desarrollada en Angular que permite buscar, explorar y gestionar GIFs utilizando la API de Giphy.
 
-## Development server
+## Características
 
-To start a local development server, run:
+- Búsqueda de GIFs en tiempo real
+- Página de tendencias
+- Historial de búsquedas
+- Interfaz moderna y responsive con Tailwind CSS
+- Desarrollada con Angular 20
 
+## Tecnologías utilizadas
+
+- **Frontend:** Angular 20
+- **Styling:** Tailwind CSS
+- **API:** Giphy API
+- **Testing:** Jasmine & Karma
+
+## Requisitos previos
+
+- Node.js (versión 18 o superior)
+- npm o yarn
+- Cuenta en Giphy para obtener API key
+
+## Instalación rápida
+
+1. **Clonar el repositorio:**
 ```bash
-ng serve
+git clone https://github.com/TU_USUARIO/gifs-app.git
+cd gifs-app
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. **Instalar dependencias:**
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+3. **Configurar API Key:**
+   - Ve a [SETUP.md](./SETUP.md) para instrucciones detalladas
+   - Obtén tu API key de Giphy
+   - Configura la variable de entorno o archivos de environment
+
+4. **Ejecutar en modo desarrollo:**
+```bash
+npm start
+```
+
+5. **Abrir en el navegador:**
+```
+http://localhost:4200
+```
+
+## Scripts disponibles
+
+- `npm start` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm test` - Ejecuta las pruebas unitarias
+- `npm run watch` - Construye en modo watch
+
+## Estructura del proyecto
+
+```
+src/app/gifs/
+├── components/          # Componentes reutilizables
+│   ├── gif-list/       # Lista de GIFs
+│   ├── gif-list-item/  # Item individual de GIF
+│   ├── side-menu/      # Menú lateral
+│   └── side-menu-options/ # Opciones del menú
+├── interfaces/          # Interfaces TypeScript
+├── mappers/            # Mappers de datos
+├── pages/              # Páginas principales
+│   ├── dashboard/      # Dashboard principal
+│   ├── search/         # Página de búsqueda
+│   ├── trending/       # Página de tendencias
+│   └── history/        # Historial de búsquedas
+└── services/           # Servicios de la aplicación
+```
+
+## Configuración de API
+
+**IMPORTANTE:** Este proyecto requiere una API key de Giphy para funcionar. 
+
+**Ver [SETUP.md](./SETUP.md) para instrucciones completas de configuración.**
+
+## Testing
 
 ```bash
-ng generate --help
+# Ejecutar pruebas unitarias
+npm test
+
+# Ejecutar pruebas con coverage
+npm run test:coverage
 ```
 
 ## Building
 
-To build the project run:
-
 ```bash
-ng build
+# Build para desarrollo
+npm run build
+
+# Build para producción
+npm run build --prod
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
