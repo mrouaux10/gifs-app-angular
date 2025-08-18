@@ -20,7 +20,7 @@
 1. Copiar el rrchivo de ejemplo:
 ```bash
 cp src/environments/environment.example.ts src/environments/environment.ts
-cp src/environments/environment.rxample.ts src/environments/environment.development.ts
+cp src/environments/environment.example.ts src/environments/environment.development.ts
 ```
 
 2. Reemplazar `TU_API_KEY_AQUI` con tu API key real en ambos archivos.
