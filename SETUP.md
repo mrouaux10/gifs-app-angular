@@ -1,4 +1,4 @@
-# 🛠️ Configuración del Proyecto GifsApp
+# Configuración del Proyecto GifsApp
 
 ## 📋 Requisitos previos
 
@@ -25,7 +25,7 @@ cp src/environments/environment.example.ts src/environments/environment.developm
 
 2. Reemplazar `TU_API_KEY_AQUI` con tu API key real en ambos archivos.
 
-## 🚀 Instalación y ejecución
+## Instalación y ejecución
 
 ```bash
 # Instalar dependencias
