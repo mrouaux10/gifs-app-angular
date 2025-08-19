@@ -11,7 +11,7 @@
         </a>
     }
 
-    @for (historyKey of gifService.searchGifHistoryKeys(); track historyKey) {
+    @for (historyKey of searchGifHistoryKeys(); track historyKey) {
         <a [routerLink]="['/dashboard/history', historyKey]" [routerLinkActive]="['bg-blue-800']" class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 bg-blue-800  transition ease-linear duration-150">
             <div>
                 <i class="fa-solid fa-clock-rotate-left"></i>          

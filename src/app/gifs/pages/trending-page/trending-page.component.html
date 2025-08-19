@@ -1,3 +1,43 @@
 <section class="py-5">
-  <gif-list [gifs]="gifService.trendingGifs()" />
+  <!-- 🆕 ESTADOS SOFISTICADOS -->
+  
+  <!-- 📱 Loading State -->
+  @if (isTrendingLoading()) {
+    <div class="space-y-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Gifs Trending</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        @for (item of [1,2,3,4,5,6,7,8]; track item) {
+          <gif-skeleton />
+        }
+      </div>
+    </div>
+  }
+
+  <!-- 🚨 Error State -->
+  @if (hasTrendingError()) {
+    <div class="py-8">
+      <error-state 
+        [message]="trendingState().error || 'Error al cargar gifs trending'"
+        (onRetry)="retryTrending()"
+      />
+    </div>
+  }
+
+  <!-- 🎭 Empty State -->
+  @if (!isTrendingLoading() && !hasTrendingError() && trendingState().isEmpty) {
+    <div class="py-8">
+      <empty-state 
+        title="No hay gifs trending"
+        message="Parece que no hay gifs populares en este momento. Intenta más tarde."
+      />
+    </div>
+  }
+
+  <!-- ✅ Success State -->
+  @if (!isTrendingLoading() && !hasTrendingError() && !trendingState().isEmpty) {
+    <div>
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Gifs Trending</h2>
+      <gif-list [gifs]="trendingGifs()" />
+    </div>
+  }
 </section>
